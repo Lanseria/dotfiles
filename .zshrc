@@ -1,8 +1,17 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
 
 # git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 # ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 ZSH_THEME="spaceship"
 
+
+# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# git clone https://github.com/agkozak/zsh-z $ZSH_CUSTOM/plugins/zsh-z
 plugins=(
   git
   zsh-autosuggestions
@@ -10,7 +19,14 @@ plugins=(
   zsh-z
 )
 
+# https://ohmyz.sh/
 source $ZSH/oh-my-zsh.sh
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 
 # === NPM BINRAY CHINA ===
 # https://github.com/cnpm/binary-mirror-config/blob/master/package.json#L52
@@ -54,10 +70,8 @@ export npm_config_sharp_libvips_binary_host="https://cdn.npmmirror.com/binaries/
 export npm_config_robotjs_binary_host="https://cdn.npmmirror.com/binaries/robotjs"
 
 # === PROXY ===
-# alias setsock5proxy='export all_proxy=socks5://192.168.31.241:1082'
-alias setsock5proxy='export all_proxy=socks5://127.0.0.1:10800'
+alias setsock5proxy='export all_proxy=socks5://172.21.224.1:10802'
 alias unsetsock5proxy='unset all_proxy'
-
 
 # -------------------------------- #
 # Node Package Manager
